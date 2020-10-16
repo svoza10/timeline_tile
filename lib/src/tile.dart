@@ -43,6 +43,7 @@ class TimelineTile extends StatelessWidget {
     this.startChild,
     this.endChild,
     this.lineXY,
+    this.widthFromPoint = 200,
     this.hasIndicator = true,
     this.isFirst = false,
     this.isLast = false,
@@ -79,6 +80,8 @@ class TimelineTile extends StatelessWidget {
   /// axis value used to position the line when [TimelineAlign.manual].
   /// Must be a value from 0.0 to 1.0
   final double lineXY;
+
+  final double widthFromPoint;
 
   /// Whether it should have an indicator (default or custom).
   /// It defaults to true.
@@ -141,7 +144,7 @@ class TimelineTile extends StatelessWidget {
 
         final defaultChild = axis == TimelineAxis.vertical
             ? Container(height: 100)
-            : Container(width: 100);
+            : Container(width: widthFromPoint);
         if (alignment == TimelineAlign.start) {
           children.add(Expanded(child: endChild ?? defaultChild));
         } else if (alignment == TimelineAlign.end) {

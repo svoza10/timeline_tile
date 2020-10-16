@@ -22,16 +22,7 @@ class ShowcaseTimeline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF004E92),
-            Color(0xFF000428),
-          ],
-        ),
-      ),
+      decoration: const BoxDecoration(),
       child: SafeArea(
         child: Scaffold(
           backgroundColor: Colors.transparent,
